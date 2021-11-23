@@ -16,7 +16,7 @@ const galleryReducer = (state = initialState, action) => {
       return nextState;
 
     case GET_PHOTOS_ERROR:
-      nextState.error = true;
+      nextState.error = action.error;
       return nextState;
 
     case GET_PHOTOS_SUCCESS:

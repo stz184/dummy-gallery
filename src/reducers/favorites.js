@@ -1,3 +1,5 @@
+import {ADD_FAVORITES} from '../actions/addFavorites';
+
 const initialState = {
   ids: []
 };
@@ -6,13 +8,11 @@ const favoritesReducer = (state = initialState, action) => {
   const nextState = Object.assign({}, state);
 
   switch(action.type){
-    case 'ADD':
-      nextState.ids.push(action.payload);
+    case ADD_FAVORITES:
+      nextState.ids = action.IDs;
       return nextState;
-    case 'REMOVE':
-      return nextState.ids.filter(id => id !== action.payload);
     default:
-      return nextState;
+      return state;
   }
 }
 export default favoritesReducer

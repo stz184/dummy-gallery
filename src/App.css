@@ -30,6 +30,7 @@ main > .container {
 
 .album-grid .thumbnail img {
   border: 1px solid #c0c0c0;
+  margin-top: 15px;
 }
 
 .album-grid .thumbnail .fav {
@@ -37,4 +38,13 @@ main > .container {
   bottom: 3px;
   right: 3px;
   cursor: pointer;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
